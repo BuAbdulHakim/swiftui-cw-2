@@ -32,7 +32,10 @@ struct Exercise2: View {
                         .font(.largeTitle)
                         .multilineTextAlignment(.center)
                         .keyboardType(.decimalPad)
+                    
+                    
                     let d = Double(num) ?? 0
+                    
                     VStack(spacing: 30){
                         HStack(spacing: 40){
                             Image("us")
@@ -48,14 +51,15 @@ struct Exercise2: View {
                                 .scaledToFit()
                                 .frame(width: 50)
                             
-                            Text("$\(d*2.46, specifier: "%.2f")")
+                            Text("£\(d*2.46, specifier: "%.2f")")
                         }
                         HStack(spacing: 40){
                             Image("eu")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 50)
-                            Text("$\(d*2.70, specifier: "%.2f")")
+                            
+                            Text("€\(d*2.70, specifier: "%.2f")")
                         }
                     }.padding(.top, 50)
                     Spacer()
